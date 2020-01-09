@@ -40,7 +40,7 @@ struct Domain{
      
         ~~~
     */
-    static let imageThumbnail = "https://api.themoviedb.org/"
+    static let imageThumbnail = "https://image.tmdb.org/t/p/w185/"
     
 }
 struct APIData {

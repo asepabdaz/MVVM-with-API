@@ -20,13 +20,28 @@ class MovieViewModel: MovieViewModelProtocol {
     
     var movie: [Movie]? {
         didSet{
-            self.movieDidChanges!(true, false)
+            self.movieDidChanges?(true, false)
         }
     }
     
     func fetchMovieList() {
         self.movie = [Movie]()
-        //TODO: fetch Movie
+        //MARK: fetch Movie
+        
+        MovieAPIService.instance.fetchMovies { result in
+            
+            switch result{
+        
+            case .success(let data):
+                let mappedModel = try? JSONDecoder().decode(MovieResponseModel.self, from: data!) as MovieResponseModel
+                
+                self.movie = mappedModel?.movie ?? []
+                
+                break
+            case .failure(let error):
+                print(error.description)
+            }
+        }
     }
     
     

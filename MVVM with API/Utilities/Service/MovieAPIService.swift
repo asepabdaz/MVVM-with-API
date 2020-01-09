@@ -24,7 +24,7 @@ class MovieAPIService: NSObject, Requestable {
     }
     
     func fetchMovies(callBack: @escaping Handler) {
-        request(method: .get, url: Domain.baseUrl()) { (results) in
+        request(method: .get, url: Domain.baseUrl() + APIData.movies) { (results) in
             
             callBack(results)
         }
