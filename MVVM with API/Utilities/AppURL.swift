@@ -40,11 +40,12 @@ struct Domain{
      
         ~~~
     */
-    static let imageThumbnail = "http://image.tmdb.org/t/p/w185/"
+    static let imageThumbnail = "https://api.themoviedb.org/"
     
-    /// key yang di butuhkan ketika kita ingin mengakses **API**
-    static let keyAPI = "dd3c1218e66fe26635068418d849fbb6"
-    
+}
+struct APIData {
+    static let movies = "3/discover/movie?api_key=dd3c1218e66fe26635068418d849fbb6"
+    static let searchQuery = "3/search/multi?api_key=dd3c1218e66fe26635068418d849fbb6&query="
 }
 extension Domain{
     

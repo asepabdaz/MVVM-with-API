@@ -78,22 +78,47 @@ extension Requestable {
         
         guard let url = URL(string: url) else { return }
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            DispatchQueue.main.async {
-                if let error = error {
-                    print(error.localizedDescription)
-                }else if let httpResponse = response as? HTTPURLResponse {
-                    if httpResponse.statusCode == 200 {
-                        // TODO: decode data JSON to model
-                        
-                        
-                    }else {
-                        callback(.failure(true))
+        switch method {
+        case .get:
+            //MARK: menggunakan get jika parameter tidak mimilik parameter
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                
+                DispatchQueue.main.async {
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }else if let httpResponse = response as? HTTPURLResponse {
+                        if httpResponse.statusCode == 200 {
+                            // MARK: decode data JSON to model
+                            
+                            let mappedModel = try? JSONDecoder().decode(MovieResponseModel.self, from: data!)
+                            
+                            if mappedModel != nil {
+                                
+                                callback(.success(data!))
+                                
+                            } else {
+                                
+                                callback(.failure(true))
+                                
+                            }
+                            
+                        }else {
+                            callback(.failure(true))
+                        }
                     }
                 }
             }
+            task.resume()
+            break
+        case .post:
+            // MARK: menggunakan post jika memiliki parameter
+            break
+            
+        case .other( _):
+            // MARK: menggunakan other jika memilik metode lain
+            break;
         }
-        task.resume()
+        
+        
     }
 }

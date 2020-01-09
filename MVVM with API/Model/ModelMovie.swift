@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-struct MovieRespnseModel: Codable {
+struct MovieResponseModel: Codable {
     let page: Int?
     let total_results: Int?
     let total_pages: Int?
