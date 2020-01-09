@@ -19,6 +19,7 @@
 		0E9CE4D223C7115C0038B1FE /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CE4D123C7115C0038B1FE /* Array.swift */; };
 		0E9CE4D523C712230038B1FE /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CE4D323C712230038B1FE /* MovieViewController.swift */; };
 		0E9CE4D623C712230038B1FE /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E9CE4D423C712230038B1FE /* MovieViewController.xib */; };
+		0E9CE4E423C71C450038B1FE /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CE4E323C71C450038B1FE /* MovieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		0E9CE4D123C7115C0038B1FE /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		0E9CE4D323C712230038B1FE /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		0E9CE4D423C712230038B1FE /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
+		0E9CE4E323C71C450038B1FE /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		0E9CE4C423C6C60B0038B1FE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0E9CE4E323C71C450038B1FE /* MovieViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				0E9CE4CF23C6F1EB0038B1FE /* ModelMovie.swift in Sources */,
 				0E9CE4D523C712230038B1FE /* MovieViewController.swift in Sources */,
 				0E9CE4A023C6C56E0038B1FE /* AppDelegate.swift in Sources */,
+				0E9CE4E423C71C450038B1FE /* MovieViewModel.swift in Sources */,
 				0E9CE4D223C7115C0038B1FE /* Array.swift in Sources */,
 				0E9CE4A223C6C56E0038B1FE /* SceneDelegate.swift in Sources */,
 				0E9CE4C723C6C73E0038B1FE /* AppURL.swift in Sources */,
