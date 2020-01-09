@@ -16,6 +16,7 @@
 		0E9CE4B723C6C5700038B1FE /* MVVM_with_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CE4B623C6C5700038B1FE /* MVVM_with_APITests.swift */; };
 		0E9CE4C723C6C73E0038B1FE /* AppURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CE4C623C6C73E0038B1FE /* AppURL.swift */; };
 		0E9CE4CA23C6DCAF0038B1FE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CE4C923C6DCAF0038B1FE /* Networking.swift */; };
+		0E9CE4CC23C6EBA20038B1FE /* MovieAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CE4CB23C6EBA20038B1FE /* MovieAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		0E9CE4B823C6C5700038B1FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E9CE4C623C6C73E0038B1FE /* AppURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURL.swift; sourceTree = "<group>"; };
 		0E9CE4C923C6DCAF0038B1FE /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		0E9CE4CB23C6EBA20038B1FE /* MovieAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +135,6 @@
 			children = (
 				0E9CE4C823C6D9310038B1FE /* Service */,
 				0E9CE4C623C6C73E0038B1FE /* AppURL.swift */,
-				0E9CE4C923C6DCAF0038B1FE /* Networking.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -141,6 +142,8 @@
 		0E9CE4C823C6D9310038B1FE /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				0E9CE4C923C6DCAF0038B1FE /* Networking.swift */,
+				0E9CE4CB23C6EBA20038B1FE /* MovieAPIService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E9CE4A423C6C56E0038B1FE /* ViewController.swift in Sources */,
+				0E9CE4CC23C6EBA20038B1FE /* MovieAPIService.swift in Sources */,
 				0E9CE4CA23C6DCAF0038B1FE /* Networking.swift in Sources */,
 				0E9CE4A023C6C56E0038B1FE /* AppDelegate.swift in Sources */,
 				0E9CE4A223C6C56E0038B1FE /* SceneDelegate.swift in Sources */,
