@@ -3,30 +3,41 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieViewController" customModule="MVVM_with_API" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="Gqo-W5-myJ" id="bjU-pC-ESJ"/>
+                <outlet property="collectionView" destination="GFg-t7-mHm" id="Sct-Om-Yod"/>
+                <outlet property="view" destination="ke6-Jv-cP6" id="nmI-SZ-aH7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" id="Gqo-W5-myJ">
+        <view contentMode="scaleToFill" id="ke6-Jv-cP6">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GFg-t7-mHm">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M48-uY-7QS">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sim-tv-rWb">
-                <size key="itemSize" width="50" height="50"/>
-                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-            </collectionViewFlowLayout>
-            <connections>
-                <outlet property="dataSource" destination="-1" id="qgC-B7-fGO"/>
-                <outlet property="delegate" destination="-1" id="tTP-zU-5UF"/>
-            </connections>
-            <point key="canvasLocation" x="-923" y="-215"/>
-        </collectionView>
+            <constraints>
+                <constraint firstItem="GFg-t7-mHm" firstAttribute="top" secondItem="2r2-zZ-RwM" secondAttribute="top" id="E0n-Zc-TeE"/>
+                <constraint firstItem="GFg-t7-mHm" firstAttribute="leading" secondItem="2r2-zZ-RwM" secondAttribute="leading" id="geJ-Ta-3Ie"/>
+                <constraint firstItem="2r2-zZ-RwM" firstAttribute="trailing" secondItem="GFg-t7-mHm" secondAttribute="trailing" id="gl1-xS-bEi"/>
+                <constraint firstItem="2r2-zZ-RwM" firstAttribute="bottom" secondItem="GFg-t7-mHm" secondAttribute="bottom" id="q9K-pC-U91"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="2r2-zZ-RwM"/>
+            <point key="canvasLocation" x="-5" y="-197"/>
+        </view>
     </objects>
 </document>

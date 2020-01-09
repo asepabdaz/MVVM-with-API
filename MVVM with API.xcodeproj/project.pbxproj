@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E8E9F3523C7500B00C3A143 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9F3423C7500B00C3A143 /* Coordinator.swift */; };
+		0E8E9F3823C7566400C3A143 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9F3723C7566400C3A143 /* MainTabBarCoordinator.swift */; };
+		0E8E9F3A23C759A600C3A143 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9F3923C759A600C3A143 /* MainCoordinator.swift */; };
+		0E8E9F4423C763AB00C3A143 /* FavoriteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9F4323C763AB00C3A143 /* FavoriteCoordinator.swift */; };
 		0E9CE4A023C6C56E0038B1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CE49F23C6C56E0038B1FE /* AppDelegate.swift */; };
 		0E9CE4A223C6C56E0038B1FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CE4A123C6C56E0038B1FE /* SceneDelegate.swift */; };
 		0E9CE4A923C6C5700038B1FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E9CE4A823C6C5700038B1FE /* Assets.xcassets */; };
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E8E9F3423C7500B00C3A143 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0E8E9F3723C7566400C3A143 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		0E8E9F3923C759A600C3A143 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		0E8E9F4323C763AB00C3A143 /* FavoriteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoordinator.swift; sourceTree = "<group>"; };
 		0E9CE49C23C6C56E0038B1FE /* MVVM with API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM with API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9CE49F23C6C56E0038B1FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E9CE4A123C6C56E0038B1FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +78,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8E9F3323C74FBF00C3A143 /* BaseCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0E8E9F3623C7564A00C3A143 /* Coordinator */,
+				0E8E9F3423C7500B00C3A143 /* Coordinator.swift */,
+			);
+			path = BaseCoordinator;
+			sourceTree = "<group>";
+		};
+		0E8E9F3623C7564A00C3A143 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0E8E9F3723C7566400C3A143 /* MainTabBarCoordinator.swift */,
+				0E8E9F3923C759A600C3A143 /* MainCoordinator.swift */,
+				0E8E9F4323C763AB00C3A143 /* FavoriteCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		0E9CE49323C6C56E0038B1FE = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +118,7 @@
 		0E9CE49E23C6C56E0038B1FE /* MVVM with API */ = {
 			isa = PBXGroup;
 			children = (
+				0E8E9F3323C74FBF00C3A143 /* BaseCoordinator */,
 				0E9CE4D023C710E80038B1FE /* Extension */,
 				0E9CE4C523C6C6140038B1FE /* Utilities */,
 				0E9CE4CD23C6F1720038B1FE /* Model */,
@@ -275,14 +303,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E9CE4CC23C6EBA20038B1FE /* MovieAPIService.swift in Sources */,
+				0E8E9F3A23C759A600C3A143 /* MainCoordinator.swift in Sources */,
 				0E9CE4CA23C6DCAF0038B1FE /* Networking.swift in Sources */,
+				0E8E9F3523C7500B00C3A143 /* Coordinator.swift in Sources */,
 				0E9CE4CF23C6F1EB0038B1FE /* ModelMovie.swift in Sources */,
 				0E9CE4D523C712230038B1FE /* MovieViewController.swift in Sources */,
 				0E9CE4A023C6C56E0038B1FE /* AppDelegate.swift in Sources */,
+				0E8E9F3823C7566400C3A143 /* MainTabBarCoordinator.swift in Sources */,
 				0E9CE4E423C71C450038B1FE /* MovieViewModel.swift in Sources */,
 				0E9CE4D223C7115C0038B1FE /* Array.swift in Sources */,
 				0E9CE4A223C6C56E0038B1FE /* SceneDelegate.swift in Sources */,
 				0E9CE4C723C6C73E0038B1FE /* AppURL.swift in Sources */,
+				0E8E9F4423C763AB00C3A143 /* FavoriteCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
