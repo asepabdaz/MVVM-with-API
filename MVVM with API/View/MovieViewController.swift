@@ -22,7 +22,6 @@ class MovieViewController: UIViewController {
         
         regiester()
         prepareViewModelObserver()
-        fetcMovieList()
         
     }
     
@@ -54,17 +53,30 @@ extension MovieViewController {
 }
 extension MovieViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.movie!.count
+        return viewModel.movie?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieViewCell", for: indexPath) as? MovieCellCollectionViewCell else {
-            fatalError("AddressCell cell is not found")
-        }
         
-        let movie = viewModel.movie![indexPath.row]
-        cell.movieItem = movie
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieViewCell", for: indexPath) as? MovieCellCollectionViewCell {
+            let movie = viewModel.movie![indexPath.row]
+            cell.movieItem = movie
+            return cell
+        }
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let coordinator = coordinator {
+            let movie = viewModel.movie![indexPath.row]
+            let model = ModelDetailMovie(titleMovie: movie.title!, rateMovie: movie.vote_average!, languageMovie: movie.original_language!.uppercased(), imageTumbnailMovie: movie.poster_path!, buttonStatusMovie: true, descpritionMovie: movie.overview!)
+            let viewModel = DetailMovieViewModel(movieModel: model)
+            //General list movie
+            coordinator.detailCollectionView(model: viewModel)
+            
+        }else if coordinator2 != nil{
+            
+        }
     }
     
 }

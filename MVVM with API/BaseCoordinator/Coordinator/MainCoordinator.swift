@@ -21,7 +21,15 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         let vc = MovieViewController()
         vc.tabBarItem = UITabBarItem(title: "List", image: UIImage(named: "listDeactive"), selectedImage: UIImage(named: "listActive"))
         vc.coordinator = self
+        vc.viewModel.fetchMovieList()
         vc.title = "Movie Lover"
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func detailCollectionView(model: DetailMovieViewModel){
+        let vc = DetailMovieViewController()
+        vc.viewModel = model
+        vc.title = "Movie Lover"
+        navigationController.pushViewController(vc, animated: true)
     }
 }

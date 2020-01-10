@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/// MainTabBarCoordinator  digunakan untuk menampung tab bar yang akan digunakan
 class MainTabBarCoordinator: UITabBarController {
     let main = MainCoordinator(navigationController: UINavigationController())
     let favorite = FavoriteCoordinator(navigationController: UINavigationController())

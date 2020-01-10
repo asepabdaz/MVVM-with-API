@@ -38,4 +38,35 @@ extension UIImageView{
         
     }
     
+    
+    
+}
+extension UIImage{
+    func getImageData(urlImage: String) -> UIImage{
+        let dispatchQueue = DispatchQueue(label: "internal")
+        var imageVIew: UIImage?
+        dispatchQueue.async {
+            guard let image = try? Data(contentsOf: URL(string: Domain.imageThumbnail + urlImage)!) else {return}
+            let firstImage = UIImage(data: image)
+            DispatchQueue.main.async {
+                imageVIew = firstImage
+            }
+        }
+        return imageVIew!//        var imageView: UIImage?
+//        let urlwithPercent = urlImage.addingPercentEncoding( withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+//
+//        let urlRequest = URLRequest(url: URL(string: Domain.imageThumbnail + urlwithPercent!)!)
+//        URLSession.shared.dataTask(with: urlRequest) {data, _, _ in
+//            if data != nil {
+//                DispatchQueue.main.async {
+//                    let imageToCache = UIImage(data: data!)
+//                    if imageToCache != nil {
+//                        imageView = imageToCache
+//                    }
+//                    return imageToCache
+//                }
+//            }
+//        }
+//        return imageView ?? UIImage()
+    }
 }

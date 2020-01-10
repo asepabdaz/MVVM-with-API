@@ -50,7 +50,7 @@ struct Movie: Codable {
         case vote_count = "vote_count"
         case id = "id"
         case video = "video"
-        case vote_average = "votage_average"
+        case vote_average = "vote_average"
         case title = "title"
         case popularity = "popularity"
         case poster_path = "poster_path"
