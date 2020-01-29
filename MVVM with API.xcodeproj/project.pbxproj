@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E5B34F623E168AB0064D928 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B34F423E168AB0064D928 /* TestViewController.swift */; };
+		0E5B34F723E168AB0064D928 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B34F523E168AB0064D928 /* TestViewController.xib */; };
 		0E80335123C7A14100CCD874 /* ImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80335023C7A14100CCD874 /* ImageView+Extension.swift */; };
 		0E8A0C3523C8045F00946123 /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A0C3323C8045F00946123 /* DetailMovieViewController.swift */; };
 		0E8A0C3623C8045F00946123 /* DetailMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8A0C3423C8045F00946123 /* DetailMovieViewController.xib */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E5B34F423E168AB0064D928 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		0E5B34F523E168AB0064D928 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		0E80335023C7A14100CCD874 /* ImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extension.swift"; sourceTree = "<group>"; };
 		0E8A0C3323C8045F00946123 /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
 		0E8A0C3423C8045F00946123 /* DetailMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMovieViewController.xib; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				0E9CE4D423C712230038B1FE /* MovieViewController.xib */,
 				0E8A0C3323C8045F00946123 /* DetailMovieViewController.swift */,
 				0E8A0C3423C8045F00946123 /* DetailMovieViewController.xib */,
+				0E5B34F423E168AB0064D928 /* TestViewController.swift */,
+				0E5B34F523E168AB0064D928 /* TestViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				0E8A0C3623C8045F00946123 /* DetailMovieViewController.xib in Resources */,
 				0E9CE4AC23C6C5700038B1FE /* LaunchScreen.storyboard in Resources */,
 				0E9CE4A923C6C5700038B1FE /* Assets.xcassets in Resources */,
+				0E5B34F723E168AB0064D928 /* TestViewController.xib in Resources */,
 				0E8E9F4B23C77F6200C3A143 /* MovieCellCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +353,7 @@
 				0E9CE4D523C712230038B1FE /* MovieViewController.swift in Sources */,
 				0E9CE4A023C6C56E0038B1FE /* AppDelegate.swift in Sources */,
 				0E8E9F3823C7566400C3A143 /* MainTabBarCoordinator.swift in Sources */,
+				0E5B34F623E168AB0064D928 /* TestViewController.swift in Sources */,
 				0E9CE4E423C71C450038B1FE /* MovieViewModel.swift in Sources */,
 				0E9CE4D223C7115C0038B1FE /* Array+Extension.swift in Sources */,
 				0E80335123C7A14100CCD874 /* ImageView+Extension.swift in Sources */,
